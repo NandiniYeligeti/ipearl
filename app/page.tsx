@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="w-full bg-background">
       <section className="w-full">
-        <img src="/banner.png" alt="Banner" className="w-full h-auto" />
+        <img src="/banner.png" alt="Banner" className="w-full h-auto max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover" />
       </section>
       <Hero />
       <ProductsSection />

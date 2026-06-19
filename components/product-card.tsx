@@ -40,7 +40,7 @@ export function ProductCard({ product }: ProductCardProps) {
     >
       {/* Color Preview */}
       <div
-        className="h-48 relative overflow-hidden"
+        className="h-36 md:h-48 relative overflow-hidden"
         style={{
           backgroundColor: product.color === 'rose' ? '#d4a5a5' :
             product.color === 'lavender' ? '#d1c4e9' :
@@ -52,20 +52,20 @@ export function ProductCard({ product }: ProductCardProps) {
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 3, repeat: Infinity }}
-          className="w-full h-full flex items-center justify-center text-6xl"
+          className="w-full h-full flex items-center justify-center text-5xl md:text-6xl"
         >
           🧼
         </motion.div>
       </div>
 
       {/* Content */}
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-foreground mb-2">{product.name}</h3>
-        <p className="text-sm text-muted-foreground mb-4">{product.description}</p>
+      <div className="p-4 md:p-6 flex flex-col flex-grow">
+        <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">{product.name}</h3>
+        <p className="text-xs md:text-sm text-muted-foreground mb-4">{product.description}</p>
 
         {/* Scent and Benefits */}
         <div className="mb-4 space-y-2">
-          <p className="text-sm">
+          <p className="text-xs md:text-sm">
             <span className="font-semibold text-foreground">Scent: </span>
             <span className="text-muted-foreground">{product.scent}</span>
           </p>
@@ -73,7 +73,7 @@ export function ProductCard({ product }: ProductCardProps) {
             {product.benefits.map((benefit) => (
               <span
                 key={benefit}
-                className="text-xs bg-accent/20 text-accent-foreground px-3 py-1 rounded-full"
+                className="text-xs bg-accent/20 text-accent-foreground px-2 md:px-3 py-1 rounded-full"
               >
                 {benefit}
               </span>
@@ -82,12 +82,12 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Price */}
-        <div className="text-2xl font-bold text-primary mb-4">
+        <div className="text-xl md:text-2xl font-bold text-primary mb-4">
           ₹{product.price}
         </div>
 
         {/* Quantity Selector */}
-        <div className="flex items-center gap-3 mb-4">
+        <div className="flex items-center gap-2 md:gap-3 mb-4">
           <button
             onClick={() => setQuantity(Math.max(1, quantity - 1))}
             className="w-8 h-8 rounded-lg bg-secondary text-foreground hover:bg-primary transition-colors flex items-center justify-center font-semibold"

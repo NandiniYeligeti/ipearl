@@ -99,16 +99,16 @@ export function CheckoutForm() {
   }
 
   return (
-    <div className="min-h-screen bg-background py-12 px-4">
+    <div className="min-h-screen bg-background py-8 md:py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8"
         >
           <div className="lg:col-span-2">
-            <div className="bg-card rounded-2xl shadow-lg p-8">
-              <h1 className="text-3xl font-bold text-foreground mb-8">
+            <div className="bg-card rounded-2xl shadow-lg p-6 md:p-8">
+              <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8">
                 Checkout
               </h1>
 
@@ -117,7 +117,7 @@ export function CheckoutForm() {
                 className="space-y-6"
               >
                 <div>
-                  <h2 className="text-lg font-semibold text-foreground mb-4">
+                  <h2 className="text-base md:text-lg font-semibold text-foreground mb-4">
                     Delivery Details
                   </h2>
 
@@ -132,7 +132,7 @@ export function CheckoutForm() {
                       required
                     />
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <input
                         type="email"
                         name="email"
@@ -164,7 +164,7 @@ export function CheckoutForm() {
                       required
                     />
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <input
                         type="text"
                         name="city"
@@ -189,14 +189,14 @@ export function CheckoutForm() {
                 </div>
 
                 {error && (
-                  <div className="p-4 border border-red-500 text-red-500 rounded-lg">
+                  <div className="p-4 border border-red-500 text-red-500 rounded-lg text-sm">
                     {error}
                   </div>
                 )}
 
                 <Button
                   type="submit"
-                  className="w-full bg-green-500 hover:bg-green-600 text-white py-6 text-lg"
+                  className="w-full bg-green-500 hover:bg-green-600 text-white py-4 md:py-6 text-base md:text-lg"
                 >
                   💬 Place Order via WhatsApp
                 </Button>
@@ -215,8 +215,8 @@ export function CheckoutForm() {
           </div>
 
           <div className="lg:col-span-1">
-            <div className="bg-card rounded-2xl shadow-lg p-6 sticky top-8">
-              <h2 className="text-xl font-bold mb-6">
+            <div className="bg-card rounded-2xl shadow-lg p-4 md:p-6 sticky top-8">
+              <h2 className="text-lg md:text-xl font-bold mb-4 md:mb-6">
                 Order Summary
               </h2>
 
@@ -227,16 +227,16 @@ export function CheckoutForm() {
                     className="flex justify-between"
                   >
                     <div>
-                      <p className="font-medium">
+                      <p className="font-medium text-sm md:text-base">
                         {item.name}
                       </p>
 
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-xs md:text-sm text-muted-foreground">
                         Qty: {item.quantity}
                       </p>
                     </div>
 
-                    <p>
+                    <p className="text-sm md:text-base">
                       ₹{item.price * item.quantity}
                     </p>
                   </div>
@@ -244,7 +244,7 @@ export function CheckoutForm() {
               </div>
 
               <div className="border-t pt-4">
-                <div className="flex justify-between text-lg font-bold">
+                <div className="flex justify-between text-base md:text-lg font-bold">
                   <span>Total</span>
                   <span>₹{totalPrice}</span>
                 </div>
