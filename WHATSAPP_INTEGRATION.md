@@ -1,7 +1,7 @@
 # WhatsApp Order Integration
 
 ## Overview
-The Luxe Soap e-commerce website now includes a WhatsApp ordering option alongside the Razorpay payment gateway. Customers can send their cart details directly to the business WhatsApp number: **+91 8928197398**
+The Luxe Soap e-commerce website uses WhatsApp as the primary ordering method. Customers can send their cart details directly to the business WhatsApp number: **+91 8928197398**
 
 ## Features
 
@@ -18,7 +18,7 @@ The Luxe Soap e-commerce website now includes a WhatsApp ordering option alongsi
   - Total order amount
 
 ### 3. Checkout Page WhatsApp Option
-- Both "Pay ₹{amount}" (Razorpay) and "Order via WhatsApp" buttons available
+- "💬 Place Order via WhatsApp" button available
 - Requires customers to fill delivery details before sending
 - Message includes:
   - Full customer information (name, email, phone, address, city, PIN)
