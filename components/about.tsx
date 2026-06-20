@@ -73,7 +73,7 @@ export function About() {
           </h2>
 
           <p className="text-base md:text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed px-2">
-            Luxe Soap was born from a passion for combining nature&apos;s purity
+            ipearls Soap was born from a passion for combining nature&apos;s purity
             with luxurious self-care. We believe that skincare should be both
             effective and indulgent, without compromising on sustainability.
           </p>
@@ -128,7 +128,7 @@ export function About() {
                   100%
                 </div>
                 <p className="text-slate-700 text-base md:text-lg mt-2">
-                  Natural & Organic Ingredients
+                  Natural & Organic 
                 </p>
               </div>
 
@@ -155,7 +155,7 @@ export function About() {
           {/* Why Choose Us */}
           <div className="bg-white/20 backdrop-blur-md rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-white/30">
             <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4 md:mb-6">
-              Why Choose Luxe Soap?
+              Why Choose ipearls Soap?
             </h3>
 
             <div className="space-y-4 md:space-y-5">

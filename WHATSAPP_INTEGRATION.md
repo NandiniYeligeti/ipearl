@@ -1,7 +1,7 @@
 # WhatsApp Order Integration
 
 ## Overview
-The Luxe Soap e-commerce website uses WhatsApp as the primary ordering method. Customers can send their cart details directly to the business WhatsApp number: **+91 8928197398**
+The ipearls Soap e-commerce website uses WhatsApp as the primary ordering method. Customers can send their cart details directly to the business WhatsApp number: **+91 9323626985**
 
 ## Features
 
@@ -29,7 +29,7 @@ The Luxe Soap e-commerce website uses WhatsApp as the primary ordering method. C
 
 ### Message Format
 ```
-*Luxe Soap Order*
+*ipearls Soap Order*
 
 *Customer Details:*
 Name: [Customer Name]
@@ -55,7 +55,7 @@ https://wa.me/{phoneNumber}?text={encodedMessage}
 ```
 
 Where:
-- `phoneNumber` = 8928197398 (without country code +91)
+- `phoneNumber` = 9323626985 (without country code +91)
 - `encodedMessage` = URL-encoded message with order details
 
 ## Integration Points
@@ -66,10 +66,10 @@ Where:
 3. **`components/cart-drawer.tsx`** - Added WhatsApp quick order button to cart
 
 ### Business WhatsApp Number
-- **Default Number**: 8928197398
+- **Default Number**: 9323626985
 - To change the number, update the value in:
-  - `components/checkout-form.tsx` (line: `sendWhatsAppMessage('8928197398', ...)`)
-  - `components/cart-drawer.tsx` (line: `sendWhatsAppMessage('8928197398', ...)`)
+  - `components/checkout-form.tsx` (line: `sendWhatsAppMessage('9323626985', ...)`)
+  - `components/cart-drawer.tsx` (line: `sendWhatsAppMessage('9323626985', ...)`)
 
 ## User Experience
 

@@ -16,7 +16,7 @@
 
 // function SoapModel({
 //   color,
-//   engravedText = 'Luxe Soap',
+//   engravedText = 'ipearls Soap',
 // }: Soap3DProps) {
 //   const groupRef = useRef<THREE.Group>(null)
 

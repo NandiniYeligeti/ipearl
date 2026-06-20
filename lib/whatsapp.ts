@@ -17,7 +17,7 @@ export interface OrderDetails {
 export const generateWhatsAppMessage = (orderDetails: OrderDetails): string => {
   const { name, email, phone, address, city, pincode, items, total } = orderDetails
 
-  let message = `*Luxe Soap Order*\n\n`
+  let message = `*ipearls Soap Order*\n\n`
   message += `*Customer Details:*\n`
   message += `Name: ${name}\n`
   message += `Email: ${email}\n`

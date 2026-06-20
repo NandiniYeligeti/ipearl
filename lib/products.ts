@@ -78,6 +78,32 @@ export const products: Product[] = [
     scent: 'Fresh & Soothing',
     benefits: ['Soothing', 'Moisturizing', 'Gentle exfoliation'],
   },
+    {
+  id: 'soap-rosehibiscus',
+  name: 'Rose Hibiscus',
+  description: 'Gentle rose and hibiscus soap for soft, radiant skin',
+  price: 90,
+  originalPrice: 120,
+  color: 'red',
+  colorName: 'Rose Pink',
+  image: '/rosehibiscus.jpeg',
+  ingredients: ['Rose Petals', 'Hibiscus Extract', 'Coconut Oil', 'Shea Butter'],
+  scent: 'Floral & Refreshing',
+  benefits: ['Hydrating', 'Brightening', 'Softening']
+},
+{
+  id: 'soap-ubtan',
+  name: 'Ubtan',
+  description: 'Traditional ubtan soap for bright, glowing skin',
+  price: 90,
+  originalPrice: 120,
+  color: 'yellow',
+  colorName: 'Golden Yellow',
+  image: '/ubtan.jpeg',
+  ingredients: ['Turmeric', 'Sandalwood', 'Gram Flour', 'Rose Water'],
+  scent: 'Warm & Earthy',
+  benefits: ['Brightening', 'Exfoliating', 'Tan Removal']
+}
 ]
 
 export const colors = [
