@@ -4,7 +4,7 @@ import { CartDrawer } from '@/components/cart-drawer'
 
 export default function Home() {
   return (
-    <main className="w-full bg-background">
+    <main className="w-full bg-background pt-16">
       <section className="w-full">
         <img src="/banner.png" alt="Banner" className="w-full h-auto max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover" />
       </section>

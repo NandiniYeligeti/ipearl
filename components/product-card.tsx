@@ -38,24 +38,13 @@ export function ProductCard({ product }: ProductCardProps) {
       transition={{ duration: 0.5 }}
       className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full"
     >
-      {/* Color Preview */}
-      <div
-        className="h-36 md:h-48 relative overflow-hidden"
-        style={{
-          backgroundColor: product.color === 'rose' ? '#d4a5a5' :
-            product.color === 'lavender' ? '#d1c4e9' :
-            product.color === 'mint' ? '#c8e6c9' :
-            product.color === 'peach' ? '#f0c4b8' :
-            product.color === 'honey' ? '#ffe0b2' : '#ff9999',
-        }}
-      >
-        <motion.div
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 3, repeat: Infinity }}
-          className="w-full h-full flex items-center justify-center text-5xl md:text-6xl"
-        >
-          🧼
-        </motion.div>
+      {/* Product Image */}
+      <div className="h-36 md:h-48 relative overflow-hidden bg-white">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-full object-cover"
+        />
       </div>
 
       {/* Content */}
@@ -82,8 +71,15 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Price */}
-        <div className="text-xl md:text-2xl font-bold text-primary mb-4">
-          ₹{product.price}
+        <div className="mb-4">
+          {product.originalPrice && (
+            <div className="text-sm text-muted-foreground line-through">
+              ₹{product.originalPrice}
+            </div>
+          )}
+          <div className="text-xl md:text-2xl font-bold text-primary">
+            ₹{product.price}
+          </div>
         </div>
 
         {/* Quantity Selector */}
