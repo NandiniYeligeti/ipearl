@@ -53,7 +53,7 @@ export function CheckoutForm() {
       return
     }
 
-    sendWhatsAppMessage('8928197398', {
+    sendWhatsAppMessage('918928197398', {
       name: formData.name,
       email: formData.email,
       phone: formData.phone,

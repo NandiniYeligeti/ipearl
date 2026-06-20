@@ -141,7 +141,7 @@ export function CartDrawer() {
                   </Link>
                   <Button
                     onClick={() => {
-                      sendWhatsAppMessage('8928197398', {
+                      sendWhatsAppMessage('918928197398', {
                         name: 'Customer',
                         email: 'customer@example.com',
                         phone: '',
