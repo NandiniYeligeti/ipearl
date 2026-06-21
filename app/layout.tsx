@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'ipearls Soap - Premium Organic Soaps',
+  title: 'ipearls Soap - Premium Natural Soaps',
   description:
-    'Discover our collection of luxurious, handcrafted organic soaps. Shop premium skincare products made with natural ingredients.',
+    'Discover our collection of luxurious, handcrafted Natural soaps. Shop premium skincare products made with natural ingredients.',
   icons: {
     icon: '/ipearl.png',
     apple: '/ipearl.png',

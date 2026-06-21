@@ -55,7 +55,7 @@ Our Soap Collection </h2>
           icon: '🌿',
           title: '100% Natural',
           description:
-            'Made with pure, organic ingredients from nature',
+            'Made with pure, ingredients from nature',
         },
         {
           icon: '♻️',

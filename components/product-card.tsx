@@ -2,10 +2,10 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { Product } from '@/lib/products'
 import { useCartStore, CartItem } from '@/lib/store'
 import { Button } from '@/components/ui/button'
-import Image from "next/image";
 
 interface ProductCardProps {
   product: Product
@@ -25,6 +25,7 @@ export function ProductCard({ product }: ProductCardProps) {
       color: product.color,
       image: product.image,
     }
+
     addItem(cartItem)
     setIsAdded(true)
     setTimeout(() => setIsAdded(false), 2000)
@@ -38,19 +39,27 @@ export function ProductCard({ product }: ProductCardProps) {
       transition={{ duration: 0.5 }}
       className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full"
     >
-      {/* Product Image */}
-      <div className="h-36 md:h-48 relative overflow-hidden bg-white">
+      {/* Product Image - Clickable */}
+      <Link
+        href={`/product/${product.id}`}
+        className="block h-36 md:h-48 relative overflow-hidden bg-white"
+      >
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
         />
-      </div>
+      </Link>
 
       {/* Content */}
       <div className="p-4 md:p-6 flex flex-col flex-grow">
-        <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">{product.name}</h3>
-        <p className="text-xs md:text-sm text-muted-foreground mb-4">{product.description}</p>
+        <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">
+          {product.name}
+        </h3>
+
+        <p className="text-xs md:text-sm text-muted-foreground mb-4">
+          {product.description}
+        </p>
 
         {/* Scent and Benefits */}
         <div className="mb-4 space-y-2">
@@ -58,6 +67,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <span className="font-semibold text-foreground">Scent: </span>
             <span className="text-muted-foreground">{product.scent}</span>
           </p>
+
           <div className="flex flex-wrap gap-2">
             {product.benefits.map((benefit) => (
               <span
@@ -77,6 +87,7 @@ export function ProductCard({ product }: ProductCardProps) {
               ₹{product.originalPrice}
             </div>
           )}
+
           <div className="text-xl md:text-2xl font-bold text-primary">
             ₹{product.price}
           </div>
@@ -90,13 +101,17 @@ export function ProductCard({ product }: ProductCardProps) {
           >
             -
           </button>
+
           <input
             type="number"
             min="1"
             value={quantity}
-            onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
+            onChange={(e) =>
+              setQuantity(Math.max(1, parseInt(e.target.value) || 1))
+            }
             className="w-12 h-8 border border-border rounded-lg text-center bg-input text-foreground"
           />
+
           <button
             onClick={() => setQuantity(quantity + 1)}
             className="w-8 h-8 rounded-lg bg-secondary text-foreground hover:bg-primary transition-colors flex items-center justify-center font-semibold"

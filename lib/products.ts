@@ -7,6 +7,7 @@ export interface Product {
   color: string
   colorName: string
   image: string
+  images?: string[]
   ingredients: string[]
   scent: string
   benefits: string[]
@@ -92,14 +93,31 @@ export const products: Product[] = [
   benefits: ['Hydrating', 'Brightening', 'Softening']
 },
 {
+  id: 'soap-neemcharcoal',
+  name: 'Neem Charcoal',
+  description: 'Purifying neem and charcoal soap for clear, refreshed skin',
+  price: 90,
+  originalPrice: 120,
+  color: 'black',
+  colorName: 'Charcoal Black',
+  image: '/neemcharcoal.jpeg',
+  ingredients: ['Neem Extract', 'Activated Charcoal', 'Coconut Oil', 'Tea Tree Oil'],
+  scent: 'Fresh & Herbal',
+  benefits: ['Deep Cleansing', 'Oil Control', 'Purifying']
+},
+{
   id: 'soap-ubtan',
   name: 'Ubtan',
   description: 'Traditional ubtan soap for bright, glowing skin',
-  price: 130,
-  originalPrice: 180,
+  price: 90,
+  originalPrice: 120,
   color: 'yellow',
   colorName: 'Golden Yellow',
   image: '/ubtan.jpeg',
+  images: [
+    '/ubtan.jpeg',
+    '/ubtan2.jpeg'
+  ],
   ingredients: ['Turmeric', 'Sandalwood', 'Gram Flour', 'Rose Water'],
   scent: 'Warm & Earthy',
   benefits: ['Brightening', 'Exfoliating', 'Tan Removal']
